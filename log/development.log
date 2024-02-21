@@ -1938,3 +1938,153 @@ Completed 200 OK in 1588ms (Views: 1581.0ms | ActiveRecord: 0.0ms | Allocations:
 Completed 200 OK in 1474ms (Views: 1468.7ms | ActiveRecord: 0.0ms | Allocations: 3422)
 
 
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateActiveStorageTables (20240221041623)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (18.5ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "key" varchar NOT NULL, "filename" varchar NOT NULL, "content_type" varchar, "metadata" text, "service_name" varchar NOT NULL, "byte_size" bigint NOT NULL, "checksum" varchar, "created_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_blobs_on_key" ON "active_storage_blobs" ("key")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "record_type" varchar NOT NULL, "record_id" bigint NOT NULL, "blob_id" bigint NOT NULL, "created_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments" ("blob_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_attachments_uniqueness" ON "active_storage_attachments" ("record_type", "record_id", "name", "blob_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "active_storage_variant_records" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "blob_id" bigint NOT NULL, "variation_digest" varchar NOT NULL, CONSTRAINT "fk_rails_993965df05"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_variant_records_uniqueness" ON "active_storage_variant_records" ("blob_id", "variation_digest")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240221041623') RETURNING "version"[0m
+  [1m[36mTRANSACTION (74.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2024-02-21 00:48:05 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.7ms | Allocations: 397)
+  Rendered layouts/_navbar.html.erb (Duration: 0.9ms | Allocations: 133)
+  Rendered layout layouts/application.html.erb (Duration: 3299.6ms | Allocations: 39341)
+Completed 200 OK in 4309ms (Views: 3591.2ms | ActiveRecord: 0.0ms | Allocations: 44036)
+
+
+Started GET "/courses" for ::1 at 2024-02-21 00:48:25 -0500
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (37.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:7
+  Rendered courses/index.html.erb within layouts/application (Duration: 4941.1ms | Allocations: 12365)
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 11348.9ms | Allocations: 15049)
+Completed 200 OK in 20649ms (Views: 10517.7ms | ActiveRecord: 839.0ms | Allocations: 24068)
+
+
+Started GET "/course/new" for ::1 at 2024-02-21 00:49:14 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/course/new"):
+  
+Started GET "/course/new" for ::1 at 2024-02-21 00:59:32 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/course/new"):
+  
+Started GET "/courses/new" for ::1 at 2024-02-21 01:00:20 -0500
+Processing by CoursesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/new.html.erb within layouts/application
+  Rendered courses/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1267)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 1353)
+Completed 500 Internal Server Error in 114ms (ActiveRecord: 0.0ms | Allocations: 6213)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `form' for #<ActionView::Base:0x00000000010b30>):
+    1: <h1>the new template</h1>
+    2: 
+    3: <!-- <%= form.file_field :avatar %> -->
+    4: 
+    5: <%= form_with model: @course, local: true do |form| %>
+    6: 
+  
+app/views/courses/new.html.erb:3
+Started GET "/courses" for ::1 at 2024-02-21 01:23:06 -0500
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (1605.9ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/index.html.erb within layouts/application (Duration: 4672.9ms | Allocations: 5047)
+  Rendered layouts/_navbar.html.erb (Duration: 21.0ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 6657.3ms | Allocations: 23007)
+Completed 200 OK in 12700ms (Views: 5087.1ms | ActiveRecord: 1951.3ms | Allocations: 25488)
+
+
+Started GET "/courses/new" for ::1 at 2024-02-21 01:24:38 -0500
+Processing by CoursesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/new.html.erb within layouts/application
+  Rendered courses/new.html.erb within layouts/application (Duration: 53.9ms | Allocations: 1291)
+  Rendered layout layouts/application.html.erb (Duration: 55.9ms | Allocations: 1376)
+Completed 500 Internal Server Error in 66ms (ActiveRecord: 0.0ms | Allocations: 1710)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `form' for #<ActionView::Base:0x00000000014a00>):
+    1: <h1>the new template</h1>
+    2: 
+    3: <!-- <%= form.file_field :avatar %> -->
+    4: 
+    5: <%= form_with model: @course, local: true do |form| %>
+    6: 
+  
+app/views/courses/new.html.erb:3
+Started GET "/courses/new" for ::1 at 2024-02-21 01:25:25 -0500
+Processing by CoursesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/new.html.erb within layouts/application
+  Rendered courses/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1236)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 1322)
+Completed 500 Internal Server Error in 1064ms (ActiveRecord: 49.4ms | Allocations: 6882)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `form' for #<ActionView::Base:0x000000000186f0>):
+    1: <h1>the new template</h1>
+    2: 
+    3: <!-- <%= form.file_field :avatar %> -->
+    4: 
+    5: <%= form_with model: @course, local: true do |form| %>
+    6: 
+  
+app/views/courses/new.html.erb:3
+Started GET "/courses/new" for ::1 at 2024-02-21 01:25:56 -0500
+Processing by CoursesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/new.html.erb within layouts/application
+  Rendered courses/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1221)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 1307)
+Completed 500 Internal Server Error in 216ms (ActiveRecord: 13.0ms | Allocations: 6847)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `form' for #<ActionView::Base:0x0000000001c480>):
+    1: <h1>the new template</h1>
+    2: 
+    3: <!-- <%= form.file_field :avatar %> -->
+    4: 
+    5: <%= form_with model: @course, local: true do |form| %>
+    6: 
+  
+app/views/courses/new.html.erb:3
+Started GET "/courses/new" for ::1 at 2024-02-21 01:26:21 -0500
+Processing by CoursesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/new.html.erb within layouts/application
+  Rendered courses/new.html.erb within layouts/application (Duration: 2118.7ms | Allocations: 2891)
+  Rendered layouts/_navbar.html.erb (Duration: 1.0ms | Allocations: 123)
+  Rendered layout layouts/application.html.erb (Duration: 2272.4ms | Allocations: 20849)
+Completed 200 OK in 2394ms (Views: 2284.8ms | ActiveRecord: 11.2ms | Allocations: 26412)
+
+
+  [1m[36mCourse Load (0.3ms)[0m  [1m[34mSELECT "courses".* FROM "courses" /* loading for pp */ LIMIT ?[0m  [["LIMIT", 11]]

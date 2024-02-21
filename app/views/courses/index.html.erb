@@ -2,6 +2,8 @@
 
 <h1 class="text-center m-4">Courses listing</h1>
 
+<%= link_to "new course", new_course_path %>
+
 <div class="container">
     <div class="row">
       <% @courses.each do |course| %>
@@ -15,51 +17,5 @@
             </div>
         </div>
         <% end %>
-
-        <div class="col-4">
-            <div class="card m-2" style="width: 20rem;">
-                <%= image_tag("data.jpg", class: "card-img-top") %>
-                <div class="card-body">
-                  <h5 class="card-title">DA: Data analyst</h5>
-                  <p class="card-text">Some quick example text to build on the card
-                     title and make up the bulk of the card's content.
-                     Some quick example text to build on the card title
-                     Some quick example text to build on the card title
-                      and make up the bulk of the card's content and make up the bulk of the card's con</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-4">
-            <div class="card m-2" style="width: 20rem;">
-                <%= image_tag("science.jpg", class: "card-img-top") %>
-                <div class="card-body">
-                  <h5 class="card-title">DS: Data scientist</h5>
-                  <p class="card-text">Some quick example text to build on the card 
-                    title and make up the bulk of the card's content.
-                    Some quick example text to build on the card title 
-                    Some quick example text to build on the card title and make up the bulk of the card
-                    and make up the bulk of the card's content</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-4">
-            <div class="card m-2" style="width: 20rem;">
-                <%= image_tag("programming.jpg", class: "card-img-top") %>
-                <div class="card-body">
-                  <h5 class="card-title">SE: software engineering</h5>
-                  <p class="card-text">Some quick example text to build on the card 
-                    title and make up the bulk of the card's content.
-                    Some quick example text to build on the card title 
-                    and make up the bulk of the card's content
-                    Some quick example text to build on the card title
-                     and make up the bulk of the card's content
-                </p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-        </div>
-
     </div>
 </div>

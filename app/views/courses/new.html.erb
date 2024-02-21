@@ -1,1 +1,25 @@
 <h1>the new template</h1>
+
+
+
+<%= form_with model: @course, local: true do |form| %>
+
+<div>
+    <%= form.label :short_name  %>
+    <%= form.text_field :short_name , placeholder: "Enter a short name" %>
+</div>
+
+<div>
+    <%= form.file_field :image_course %>
+</div>
+<div>
+    <%= form.label :name %>
+    <%= form.text_field :name , placeholder: "Enter a name" %>
+</div>
+
+<div>
+    <%= form.label :description %>
+    <%= form.password_field :description , placeholder: "Enter a description" %>
+</div>
+
+<% end %>

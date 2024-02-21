@@ -8,6 +8,9 @@ gem "rails", "~> 7.1.3"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
+#image gem
+gem "image_processing", ">= 1.2"
+
 #bootstrap
 gem 'bootstrap', '~> 5.3', '>= 5.3.2'
 
