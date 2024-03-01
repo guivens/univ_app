@@ -1,21 +1,5 @@
-<h1>this is the index template</h1>
-
 <h1 class="text-center m-4">Courses listing</h1>
 
-<%= link_to "new course", new_course_path %>
+<div class="text-center"><%= link_to "new course", new_course_path %></div>
 
-<div class="container">
-    <div class="row">
-      <% @courses.each do |course| %>
-        <div class="col-4">
-            <div class="card m-2" style="width: 20rem; ">
-                <div class="card-body">
-                  <h5 class="card-title"><%= course.short_name %>:<%= course.name %></h5>
-                  <p class="card-text"><%= course.description%></p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-        </div>
-        <% end %>
-    </div>
-</div>
+<%= render "listing", object: @courses %>

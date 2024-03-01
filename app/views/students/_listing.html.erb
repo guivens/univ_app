@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="row">
+      <% object.each do |object| %>
+          <div class="col-4">
+            <div class="card m-2" style="width: 20rem; ">
+                  <div class="card-body">
+                    <h5 class="card-title">Name: <%= object.name %></h5>
+                    <p class="card-text">Email: <%= object.email %></h5></p>
+                    <%= link_to "Show profile", object %>
+                  </div>
+            </div>
+          </div>
+      <% end %>    
+    </div>
+  </div>

@@ -3,6 +3,10 @@ class CoursesController < ApplicationController
         @courses = Course.all
     end
 
+    def show
+        @course = Course.find(params[:id])
+    end
+
     def new
         @course = Course.new
     end
@@ -11,7 +15,7 @@ class CoursesController < ApplicationController
         @course = Course.new(config_params)
         if @course.save
             flash[:notice] = "Course created successfuly"
-            redirect_to @courses
+            redirect_to @course
         else
             render "new"
         end
@@ -20,7 +24,7 @@ class CoursesController < ApplicationController
     private
 
     def config_params
-        params.require(:course).permit(:short_name, :name, :description, :image_course)
+        params.require(:course).permit(:short_name, :name, :description, :course_image)
 
     end
 
