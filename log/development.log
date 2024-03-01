@@ -7540,3 +7540,431 @@ Processing by StudentsController#new as HTML
 Completed 200 OK in 27ms (Views: 19.6ms | ActiveRecord: 0.0ms | Allocations: 3083)
 
 
+Started GET "/students/new" for ::1 at 2024-02-29 20:16:55 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudentsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/_form.html.erb (Duration: 1888.9ms | Allocations: 2757)
+  Rendered students/new.html.erb within layouts/application (Duration: 1908.4ms | Allocations: 3130)
+  Rendered layouts/_navbar.html.erb (Duration: 414.2ms | Allocations: 1607)
+  Rendered layout layouts/application.html.erb (Duration: 9931.6ms | Allocations: 42687)
+Completed 500 Internal Server Error in 19992ms (ActiveRecord: 171.1ms | Allocations: 63190)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `login_path' for #<ActionView::Base:0x0000000000d610>):
+    24:         </ul>
+    25:         <ul>
+    26:           <li>
+    27:             <%= link_to "login", login_path, class: "dropdown-item" %>
+    28:           </li>
+    29:         </ul>
+    30:       </div>
+  
+app/views/layouts/_navbar.html.erb:27
+app/views/layouts/application.html.erb:16
+Started GET "/students/new" for ::1 at 2024-02-29 20:29:19 -0500
+Processing by StudentsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/_form.html.erb (Duration: 5.0ms | Allocations: 1274)
+  Rendered students/new.html.erb within layouts/application (Duration: 9.1ms | Allocations: 1506)
+  Rendered layouts/_navbar.html.erb (Duration: 1.8ms | Allocations: 1212)
+  Rendered layout layouts/application.html.erb (Duration: 103.5ms | Allocations: 20532)
+Completed 500 Internal Server Error in 138ms (ActiveRecord: 0.0ms | Allocations: 24934)
+
+
+  
+ActionView::Template::Error (undefined method `login_path' for #<ActionView::Base:0x00000000012110>):
+    24:         </ul>
+    25:         <ul>
+    26:           <li>
+    27:             <%= link_to "login", login_path(session), class: "dropdown-item" %>
+    28:           </li>
+    29:         </ul>
+    30:       </div>
+  
+app/views/layouts/_navbar.html.erb:27
+app/views/layouts/application.html.erb:16
+Started GET "/students/new" for ::1 at 2024-02-29 20:30:33 -0500
+Processing by StudentsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/_form.html.erb (Duration: 6.2ms | Allocations: 1274)
+  Rendered students/new.html.erb within layouts/application (Duration: 10.3ms | Allocations: 1506)
+  Rendered layouts/_navbar.html.erb (Duration: 1.3ms | Allocations: 263)
+  Rendered layouts/_flash.html.erb (Duration: 2.6ms | Allocations: 218)
+  Rendered layouts/_footer.html.erb (Duration: 0.9ms | Allocations: 96)
+  Rendered layout layouts/application.html.erb (Duration: 168.8ms | Allocations: 20065)
+Completed 200 OK in 207ms (Views: 180.7ms | ActiveRecord: 8.4ms | Allocations: 25227)
+
+
+Started GET "/sessions/%23%3CActionDispatch::Request::Session:0x000001a4ca7e8400%3E" for ::1 at 2024-02-29 20:30:48 -0500
+  
+ActionController::RoutingError (uninitialized constant SessionsController):
+  
+Started GET "/sessions/%23%3CActionDispatch::Request::Session:0x000001a4ca7e8400%3E" for ::1 at 2024-02-29 20:31:26 -0500
+  
+ActionController::RoutingError (uninitialized constant SessionsController):
+  
+Started GET "/sessions/%23%3CActionDispatch::Request::Session:0x000001a4ca7e8400%3E" for ::1 at 2024-02-29 20:32:01 -0500
+  
+ActionController::RoutingError (uninitialized constant SessionsController):
+  
+Started GET "/sessions/%23%3CActionDispatch::Request::Session:0x000001a4ca7e8400%3E" for ::1 at 2024-02-29 20:32:05 -0500
+  
+ActionController::RoutingError (uninitialized constant SessionsController):
+  
+Started GET "/sessions/%23%3CActionDispatch::Request::Session:0x000001a4ca7e8400%3E" for ::1 at 2024-02-29 20:35:23 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/sessions/%23%3CActionDispatch::Request::Session:0x000001a4ca7e8400%3E"):
+  
+Started GET "/sessions/%23%3CActionDispatch::Request::Session:0x000001a4ca7e8400%3E" for ::1 at 2024-02-29 20:37:00 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/sessions/%23%3CActionDispatch::Request::Session:0x000001a4ca7e8400%3E"):
+  
+Started GET "/sessions/%23%3CActionDispatch::Request::Session:0x000001a4ca7e8400%3E" for ::1 at 2024-02-29 20:37:03 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/sessions/%23%3CActionDispatch::Request::Session:0x000001a4ca7e8400%3E"):
+  
+Started GET "/students/new" for ::1 at 2024-02-29 20:41:57 -0500
+Processing by StudentsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/_form.html.erb (Duration: 4.0ms | Allocations: 1382)
+  Rendered students/new.html.erb within layouts/application (Duration: 8.2ms | Allocations: 1610)
+  Rendered layouts/_navbar.html.erb (Duration: 2.5ms | Allocations: 1200)
+  Rendered layout layouts/application.html.erb (Duration: 183.8ms | Allocations: 20560)
+Completed 500 Internal Server Error in 222ms (ActiveRecord: 8.7ms | Allocations: 25640)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `login_path' for #<ActionView::Base:0x0000000002dbe0>):
+    24:         </ul>
+    25:         <ul>
+    26:           <li>
+    27:             <%= link_to "login", login_path, class: "dropdown-item" %>
+    28:           </li>
+    29:         </ul>
+    30:       </div>
+  
+app/views/layouts/_navbar.html.erb:27
+app/views/layouts/application.html.erb:16
+Started GET "/students/new" for ::1 at 2024-02-29 20:42:27 -0500
+Processing by StudentsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/_form.html.erb (Duration: 3.5ms | Allocations: 1382)
+  Rendered students/new.html.erb within layouts/application (Duration: 7.5ms | Allocations: 1614)
+  Rendered layouts/_navbar.html.erb (Duration: 2.1ms | Allocations: 1313)
+  Rendered layout layouts/application.html.erb (Duration: 87.3ms | Allocations: 20658)
+Completed 500 Internal Server Error in 125ms (ActiveRecord: 7.1ms | Allocations: 25742)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"sessions"}, missing required keys: [:id]):
+    24:         </ul>
+    25:         <ul>
+    26:           <li>
+    27:             <%= link_to "login", login_path, class: "dropdown-item" %>
+    28:           </li>
+    29:         </ul>
+    30:       </div>
+  
+app/views/layouts/_navbar.html.erb:27
+app/views/layouts/application.html.erb:16
+Started GET "/students/new" for ::1 at 2024-02-29 20:47:43 -0500
+Processing by StudentsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/_form.html.erb (Duration: 4.7ms | Allocations: 1382)
+  Rendered students/new.html.erb within layouts/application (Duration: 12.2ms | Allocations: 1614)
+  Rendered layouts/_navbar.html.erb (Duration: 1.4ms | Allocations: 245)
+  Rendered layouts/_flash.html.erb (Duration: 1.1ms | Allocations: 191)
+  Rendered layouts/_footer.html.erb (Duration: 0.8ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 102.1ms | Allocations: 20124)
+Completed 200 OK in 138ms (Views: 112.5ms | ActiveRecord: 7.0ms | Allocations: 25227)
+
+
+Started GET "/sessions/%23%3CActionDispatch::Request::Session:0x000001a4c6449208%3E" for ::1 at 2024-02-29 20:47:52 -0500
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for SessionsController):
+  
+actionpack (7.1.3) lib/abstract_controller/base.rb:155:in `process'
+actionview (7.1.3) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.3) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.3) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.3) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack (3.0.8) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.8) lib/rack/etag.rb:29:in `call'
+rack (3.0.8) lib/rack/conditional_get.rb:31:in `call'
+rack (3.0.8) lib/rack/head.rb:15:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.3) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.8) lib/rack/method_override.rb:28:in `call'
+rack (3.0.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/sessions/%23%3CActionDispatch::Request::Session:0x000001a4c6449208%3E" for ::1 at 2024-02-29 20:49:21 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/sessions/%23%3CActionDispatch::Request::Session:0x000001a4c6449208%3E"):
+  
+Started GET "/sessions/%23%3CActionDispatch::Request::Session:0x000001a4c6449208%3E" for ::1 at 2024-02-29 20:49:52 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/sessions/%23%3CActionDispatch::Request::Session:0x000001a4c6449208%3E"):
+  
+Started GET "/students/8" for ::1 at 2024-02-29 20:55:55 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mStudent Load (39.4ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:48:in `find_params'
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (Duration: 3.0ms | Allocations: 275)
+  Rendered layouts/_navbar.html.erb (Duration: 1.5ms | Allocations: 272)
+  Rendered layouts/_flash.html.erb (Duration: 1.2ms | Allocations: 191)
+  Rendered layouts/_footer.html.erb (Duration: 0.9ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 97.8ms | Allocations: 19054)
+Completed 200 OK in 1025ms (Views: 110.6ms | ActiveRecord: 47.6ms | Allocations: 27744)
+
+
+Started GET "/students/8/edit" for ::1 at 2024-02-29 20:56:03 -0500
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:48:in `find_params'
+  Rendering layout layouts/application.html.erb
+  Rendering students/edit.html.erb within layouts/application
+  Rendered students/_form.html.erb (Duration: 5.9ms | Allocations: 1401)
+  Rendered students/edit.html.erb within layouts/application (Duration: 14.4ms | Allocations: 1625)
+  Rendered layouts/_navbar.html.erb (Duration: 0.7ms | Allocations: 90)
+  Rendered layouts/_flash.html.erb (Duration: 0.3ms | Allocations: 18)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 47.3ms | Allocations: 3344)
+Completed 200 OK in 161ms (Views: 59.5ms | ActiveRecord: 0.2ms | Allocations: 4020)
+
+
+Started GET "/courses" for ::1 at 2024-02-29 20:56:10 -0500
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (17.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/_listing.html.erb:3
+  Rendered courses/_listing.html.erb (Duration: 70.0ms | Allocations: 5373)
+  Rendered courses/index.html.erb within layouts/application (Duration: 230.7ms | Allocations: 5663)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 91)
+  Rendered layouts/_flash.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 249.2ms | Allocations: 7627)
+Completed 200 OK in 422ms (Views: 239.2ms | ActiveRecord: 18.0ms | Allocations: 8647)
+
+
+Started GET "/students" for ::1 at 2024-02-29 20:56:37 -0500
+Processing by StudentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/_listing.html.erb:3
+  Rendered students/_listing.html.erb (Duration: 5.9ms | Allocations: 980)
+  Rendered students/index.html.erb within layouts/application (Duration: 35.5ms | Allocations: 1210)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 90)
+  Rendered layouts/_flash.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 86.5ms | Allocations: 3174)
+Completed 200 OK in 115ms (Views: 88.6ms | ActiveRecord: 0.3ms | Allocations: 3514)
+
+
+Started GET "/login.%23%3CActionDispatch::Request::Session:0x000001a4c64476d8%3E" for ::1 at 2024-02-29 21:01:30 -0500
+Processing by SessionsController#new as */*
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 986)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 92)
+  Rendered layouts/_flash.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 19.1ms | Allocations: 2725)
+Completed 200 OK in 1618ms (Views: 27.8ms | ActiveRecord: 0.0ms | Allocations: 3197)
+
+
+Started GET "/students" for ::1 at 2024-02-29 21:02:32 -0500
+Processing by StudentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (127.8ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/_listing.html.erb:3
+  Rendered students/_listing.html.erb (Duration: 157.6ms | Allocations: 990)
+  Rendered students/index.html.erb within layouts/application (Duration: 158.6ms | Allocations: 1053)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 90)
+  Rendered layouts/_flash.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 219.1ms | Allocations: 2997)
+Completed 200 OK in 227ms (Views: 30.1ms | ActiveRecord: 190.8ms | Allocations: 3271)
+
+
+Started GET "/login.%23%3CActionDispatch::Request::Session:0x000001a4ca92ab60%3E" for ::1 at 2024-02-29 21:02:46 -0500
+Processing by SessionsController#new as */*
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 638)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 91)
+  Rendered layouts/_flash.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 2362)
+Completed 200 OK in 23ms (Views: 17.9ms | ActiveRecord: 0.0ms | Allocations: 2622)
+
+
+Started POST "/login" for ::1 at 2024-02-29 21:03:10 -0500
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"matila@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Save Session"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "matila@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://[::1]:3000/students/6
+Completed 302 Found in 548ms (ActiveRecord: 0.3ms | Allocations: 1173)
+
+
+Started GET "/students/6" for ::1 at 2024-02-29 21:03:11 -0500
+Processing by StudentsController#show as TURBO_STREAM
+  Parameters: {"id"=>"6"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:48:in `find_params'
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 67)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 92)
+  Rendered layouts/_flash.html.erb (Duration: 0.3ms | Allocations: 22)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 2092)
+Completed 200 OK in 29ms (Views: 18.2ms | ActiveRecord: 0.2ms | Allocations: 2776)
+
+
+Started GET "/login.%23%3CActionDispatch::Request::Session:0x000001a4cab01650%3E" for ::1 at 2024-02-29 21:03:21 -0500
+Processing by SessionsController#new as */*
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 641)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 91)
+  Rendered layouts/_flash.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 165.0ms | Allocations: 2365)
+Completed 200 OK in 173ms (Views: 168.9ms | ActiveRecord: 0.0ms | Allocations: 2625)
+
+
+Started GET "/login.%23%3CActionDispatch::Request::Session:0x000001a4ca92ab60%3E" for ::1 at 2024-02-29 21:03:31 -0500
+Processing by SessionsController#new as */*
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 653)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 91)
+  Rendered layouts/_flash.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 20.1ms | Allocations: 2377)
+Completed 200 OK in 26ms (Views: 21.9ms | ActiveRecord: 0.0ms | Allocations: 2637)
+
+
+Started GET "/login.%23%3CActionDispatch::Request::Session:0x000001a4ca92ab60%3E" for ::1 at 2024-02-29 21:14:25 -0500
+Processing by SessionsController#new as */*
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 23.4ms | Allocations: 647)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 91)
+  Rendered layouts/_flash.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 112.2ms | Allocations: 2371)
+Completed 200 OK in 119ms (Views: 114.1ms | ActiveRecord: 0.0ms | Allocations: 2631)
+
+
+Started POST "/login" for ::1 at 2024-02-29 21:14:44 -0500
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"matila@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Save Session"}
+  [1m[36mStudent Load (304.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "matila@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://[::1]:3000/students/6
+Completed 302 Found in 755ms (ActiveRecord: 516.4ms | Allocations: 1077)
+
+
+Started GET "/students/6" for ::1 at 2024-02-29 21:14:45 -0500
+Processing by StudentsController#show as TURBO_STREAM
+  Parameters: {"id"=>"6"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:48:in `find_params'
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 66)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 91)
+  Rendered layouts/_flash.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 26.7ms | Allocations: 2054)
+Completed 200 OK in 36ms (Views: 28.8ms | ActiveRecord: 0.2ms | Allocations: 2701)
+
+
+Started GET "/login.%23%3CActionDispatch::Request::Session:0x000001a4ca92ab60%3E" for ::1 at 2024-02-29 21:15:10 -0500
+Processing by SessionsController#new as */*
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 650)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 91)
+  Rendered layouts/_flash.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 18.4ms | Allocations: 2374)
+Completed 200 OK in 27ms (Views: 20.1ms | ActiveRecord: 0.0ms | Allocations: 2634)
+
+
+Started GET "/login.%23%3CActionDispatch::Request::Session:0x000001a4ca92ab60%3E" for ::1 at 2024-02-29 21:26:02 -0500
+Processing by SessionsController#new as */*
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 153.5ms | Allocations: 928)
+  Rendered layouts/_navbar.html.erb (Duration: 1.3ms | Allocations: 270)
+  Rendered layouts/_flash.html.erb (Duration: 1.9ms | Allocations: 191)
+  Rendered layouts/_footer.html.erb (Duration: 0.9ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 920.3ms | Allocations: 19462)
+Completed 200 OK in 1349ms (Views: 1033.9ms | ActiveRecord: 0.0ms | Allocations: 20446)
+
+
