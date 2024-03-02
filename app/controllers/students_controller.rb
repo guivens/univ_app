@@ -35,10 +35,10 @@ class StudentsController < ApplicationController
     end
 
     def destroy
-        if @student.destroy
-            flash[:success] = "Account has been deleted successfully"
-            redirect_to root_path
-        end
+        @student.destroy
+        session[:current_student_id] = nil 
+        flash[:success] = "Account has been deleted successfully"
+        redirect_to root_path
     end
 
 

@@ -9,9 +9,15 @@ class SessionsController < ApplicationController
             flash[:success] = "you have been logged in"
             redirect_to student
         else
-            flash.now[:danger] = "there was a problem with your email or password"
-            render 'new'
+            flash[:danger] = "there was a problem with your email or password"
+            redirect_to root_path
         end
+    end
+
+    def destroy
+        session[:current_student_id] = nil
+        flash[:success] = "Logged out"
+        redirect_to root_path
     end
 
 end

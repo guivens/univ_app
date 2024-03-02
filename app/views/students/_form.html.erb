@@ -1,4 +1,13 @@
 <div class="container">
+    <% if @student.errors.any? %>
+        <ul>
+            <% @student.errors.full_messages.each do |msg| %>
+                <li>
+                    <%= msg  %>
+                </li>
+            <% end %>
+        </ul>
+    <% end %>
     <div class="row d-flex justify-content-center mt-4">
         <div class="col-6 mt-4">
                 <%= form_with model: @student, local: true do |form| %>

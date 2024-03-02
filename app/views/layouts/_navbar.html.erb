@@ -7,25 +7,38 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <%= link_to "Courses", courses_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <%= link_to "Students", students_path, class: "nav-link" %>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Account
-            </a>
-            <ul class="dropdown-menu">
-              <%= link_to "Show profile", students_path, class: "dropdown-item" %>
-              <li><hr class="dropdown-divider"></li>
-            </ul>
-          </li>
+          <% if logged_in? %>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Account
+              </a>
+              <ul class="dropdown-menu">
+                <%= link_to "Show profile", student_path(current_student), class: "dropdown-item" %>
+                <%= link_to "Edit profile", edit_student_path(current_student), class: "dropdown-item" %>
+                <li><hr class="dropdown-divider"></li>
+                <%= link_to "Delete account", student_path(current_student), data: {"turbo-method": :delete, "turbo-confirm": "Are you sure?"}, class: "dropdown-item bg-danger" %>
+              </ul>
+            </li>
+            <% end %>
         </ul>
-        <ul>
-          <li>
-            <%= link_to "login", login_path(session), class: "dropdown-item" %>
-          </li>
+        <ul class="navbar-nav d-flex justify-content-end">
+          <% if logged_in? %>
+            <li class="nav-item">
+              <%= link_to "Logout", logout_path, data: {"turbo-method": :delete}, class: "button btn btn-large nav_link" %>
+            </li>
+          <% else %>
+            <li class="nav-item">
+              <%= link_to "Login", login_path, class: "button btn btn-large nav_link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Sign up", new_student_path, class: "button btn btn-large nav_link" %>
+            </li>
+          <% end %>
         </ul>
       </div>
     </div>

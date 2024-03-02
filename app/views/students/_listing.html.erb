@@ -6,7 +6,9 @@
                   <div class="card-body">
                     <h5 class="card-title">Name: <%= object.name %></h5>
                     <p class="card-text">Email: <%= object.email %></h5></p>
+                    <% if logged_in? && object == current_student %>
                     <%= link_to "Show profile", object %>
+                    <% end %>
                   </div>
             </div>
           </div>

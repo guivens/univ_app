@@ -9,7 +9,8 @@ Rails.application.routes.draw do
   root "pages#home"
   get 'about', to: 'pages#about'
   resources :courses
-  resources :students, except: %i[destroy]
+  resources :students
   get 'login', to: 'sessions#new'
   post 'login', to: 'sessions#create'
+  delete 'logout', to: 'sessions#destroy'
 end
