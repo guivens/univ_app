@@ -4,3 +4,5 @@
 <div class="text-center">
   <%= link_to "Edit profile", edit_student_path, class: "button btn btn-large"%>
 </div>
+
+<%= render 'courses/listing', object: @student.courses %>

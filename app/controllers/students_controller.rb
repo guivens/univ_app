@@ -1,5 +1,6 @@
 class StudentsController < ApplicationController
     before_action :find_params, only: [:show, :edit, :update, :destroy]
+    skip_before_action :require_user, only: [:new, :create]
     
     def index
         @students = Student.all
@@ -15,6 +16,7 @@ class StudentsController < ApplicationController
     def create
         @student = Student.new(permit_params)
         if @student.save
+            session[:current_student_id] = @student.id
             flash[:success] = "Student account was successfuly created"
             redirect_to @student
         else

@@ -6,7 +6,12 @@
                   <div class="card-body">
                     <h5 class="card-title"><%= object.short_name %>:<%= object.name %></h5>
                     <p class="card-text"><%= object.description%></p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <% if logged_in? && !(current_student.courses.include?(object))%>
+                      <%= link_to "Enroll", course_enroll_path(course_id: object), data: {"turbo-method": :post}, class: "btn btn-primary" %>
+                    <% else %>
+                    <%= link_to "Delete", desen_path(student_course_id: current_student.courses), data: {"turbo-method": :delete , "turbo-confirm": "Are you sure?"} , class: "btn btn-primary" %>
+                    <% end %>
+                    <%= link_to "show page", object , class: "btn btn-primary" %>
                   </div>
             </div>
           </div>
